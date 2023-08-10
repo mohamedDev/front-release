@@ -18,11 +18,9 @@ jobs:
         id: release
         with:
           release-type: node
+          path: .
           extra-files: |
             front/package.json
-            docs/getting-started.md
-
-          # path: front
           changelog-types: |
             [
               {"type":"feat","section":"🚀 Features","hidden":false},
