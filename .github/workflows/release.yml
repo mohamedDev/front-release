@@ -20,7 +20,13 @@ jobs:
           release-type: node
           path: .
           extra-files: |
-            front/package.json
+            [
+              {
+                "type": "json",
+                "path": "front/package.json",
+                "jsonpath": "$.version"
+              }
+            ]
           changelog-types: |
             [
               {"type":"feat","section":"🚀 Features","hidden":false},
