@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/mohamedDev/front-release/compare/v1.0.0...v1.1.0) (2023-08-11)
+
+
+### 🚀 Features
+
+* **init:** init project with new angular starter ([48eba9a](https://github.com/mohamedDev/front-release/commit/48eba9a6a5dbfbe1ab70c318be65403e78c92e7c))
+
+
+### 🧰 Other
+
+* **develop:** release 1.0.0 ([9c16728](https://github.com/mohamedDev/front-release/commit/9c1672882d9f37c92d33591cbd2bf66373ab67f9))
+
 ## 1.0.0 (2023-08-11)
 
 
