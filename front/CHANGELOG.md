@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://github.com/mohamedDev/front-release/compare/v1.1.0...v1.1.1) (2023-08-11)
+
+
+### 🐞 Bug Fixes
+
+* **workflow:** bump metadata version ([2545e16](https://github.com/mohamedDev/front-release/commit/2545e165c1b3fc237133ee373f664a1372861851))
+
 ## [1.1.0](https://github.com/mohamedDev/front-release/compare/v1.0.0...v1.1.0) (2023-08-11)
 
 
