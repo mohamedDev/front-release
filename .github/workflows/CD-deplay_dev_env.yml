@@ -84,3 +84,7 @@ jobs:
           git config --global user.name mohamed.bouaziz
           git config --global user.email mohamed.bouaziz@cision.com
           ls -al
+          sed -i 's/1.6.0/${{ env.TAG }}/g' package.json
+          git status
+          git commit --no-verify -am "[skip ci] replace with new version"
+          git push -u origin testpr
