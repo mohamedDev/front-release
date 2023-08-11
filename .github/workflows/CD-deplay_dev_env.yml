@@ -63,6 +63,9 @@ jobs:
           git commit --no-verify -am "[skip ci] auto bump metadata version"
           git push -u origin develop
 
+    outputs:
+      newversion: "${{ env.TAG }}"
+
       ############
 
   checkout-release:
@@ -81,7 +84,7 @@ jobs:
 
       - name: Display New Tag Value
         run: |
-          echo "${{ env.TAG }}"
+          echo "${{ needs.build-container.outputs.newversion }}"
 
       - name: Git status
         run: |
@@ -89,7 +92,7 @@ jobs:
           git config --global user.name mohamed.bouaziz
           git config --global user.email mohamed.bouaziz@cision.com
           ls -al
-          sed -i 's/latest/${{ env.TAG }}/g' package.json
+          sed -i 's/latest/${{ needs.build-container.outputs.newversion }}/g' package.json
           git status
           
           if ! git diff-index --quiet HEAD --; then
