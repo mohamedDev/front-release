@@ -1,0 +1,63 @@
+---
+    name: build_push_on_gcp
+    
+    env:
+      REPO_NAME: ${github.event.repository.name}
+      APPNAME: coms-ui #THIS CANNOT CONTAIN ANY MAJ
+      TAG: latest
+      APP_ENV: dev
+      WORKING_DIR: ./front
+    
+    on:
+      push:
+        branches:
+          - develop
+    
+    permissions:
+      id-token: "write"
+      contents: "read"
+      repository-projects: "write"
+      pull-requests: "write"
+    
+    jobs:
+      build-container:
+        runs-on: ubuntu-20.04
+        environment:
+          name: Test_build
+    
+        steps:
+          - name: checkoutv2
+            uses: actions/checkout@v2
+    
+          - name: Setup Node.js environment
+            uses: actions/setup-node@v3.4.1
+    
+          - name: Setup app project dependencies
+            working-directory: ${{env.WORKING_DIR}}
+            run: npm install
+    
+          ###
+          - name: Set the build version value
+            working-directory: ${{env.WORKING_DIR}}
+            run: |
+              echo "TAG=$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
+    
+          - name: Display old Tag Value
+            run: |
+              echo "${{ env.TAG }}"
+    
+          - name: Bump build version value
+            working-directory: ${{env.WORKING_DIR}}
+            run: |
+              npm run bump
+    
+          - name: Set the build version value after bump
+            working-directory: ${{env.WORKING_DIR}}
+            run: |
+              echo "TAG=$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
+    
+          - name: Display New Tag Value
+            run: |
+              echo "${{ env.TAG }}"
+          ###
+    
