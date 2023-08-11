@@ -79,6 +79,10 @@ jobs:
           token: ${{ secrets.BOT_ACCESS_TOKEN }} # `GH_PAT` is a secret that contains your PAT(personal access token)
           ref: testpr
 
+      - name: Display New Tag Value
+        run: |
+          echo "${{ env.TAG }}"
+
       - name: Git status
         run: |
           git status
@@ -87,5 +91,10 @@ jobs:
           ls -al
           sed -i 's/latest/${{ env.TAG }}/g' package.json
           git status
-          git commit --no-verify -am "[skip ci] replace with new version"
-          git push -u origin testpr
+          
+          if ! git diff-index --quiet HEAD --; then
+            git commit --no-verify -am "[skip ci] replace with new version"
+            git push -u origin testpr
+          else 
+            echo "no changes"
+          fi
