@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          github_token: ${{ secrets.BOT_ACCESS_TOKEN }}
+          token: ${{ secrets.PAT }}
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.4.1
@@ -64,8 +64,8 @@ jobs:
 
       - name: Git config
         run: |
-          git config user.name mohamed.bouaziz
-          git config user.email mohamed.bouaziz@cision.com
+          git config --global user.name mohamed.bouaziz
+          git config --global user.email mohamed.bouaziz@cision.com
 
       - name: Git commit and push
         run: |
