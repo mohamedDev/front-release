@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2023-08-11)
+
+
+### 🚀 Features
+
+* **init:** init project with new angular starter ([48eba9a](https://github.com/mohamedDev/front-release/commit/48eba9a6a5dbfbe1ab70c318be65403e78c92e7c))
+
 ### [3.0.1](https://github.com/mohamedDev/release/compare/v3.0.0...v3.0.1) (2023-08-10)
 
 
