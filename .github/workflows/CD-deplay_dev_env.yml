@@ -65,15 +65,22 @@ jobs:
 
       ############
 
+  checkout-release:
+    runs-on: ubuntu-20.04
+    environment:
+      name: Test_build
+
+    steps:
       - name: Checkout release project
         uses: actions/checkout@v3
         with:
           repository: mohamedDev/release
           token: ${{ secrets.BOT_ACCESS_TOKEN }} # `GH_PAT` is a secret that contains your PAT(personal access token)
-          path: testpr
+          ref: testpr
 
       - name: Git status
         run: |
           git status
           git config --global user.name mohamed.bouaziz
           git config --global user.email mohamed.bouaziz@cision.com
+          ls -al
