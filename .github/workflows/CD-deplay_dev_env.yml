@@ -67,7 +67,11 @@ jobs:
       - name: Display New Tag Value
         run: |
           echo "${{ env.TAG }}"
+
       - name: Git status
         run: |
           git status
-      
+
+      - name: Git commit
+        run: |
+          git commit --no-verify -am "[skip ci] auto bump metadata version"
