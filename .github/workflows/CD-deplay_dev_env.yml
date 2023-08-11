@@ -72,6 +72,7 @@ jobs:
         run: |
           git status
 
-      - name: Git commit
+      - name: Git commit and push
         run: |
           git commit --no-verify -am "[skip ci] auto bump metadata version"
+          git push -u origin develop
