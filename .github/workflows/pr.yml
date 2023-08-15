@@ -9,7 +9,9 @@ env:
   WORKING_DIR: ./front
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - feature/*
 
 permissions:
   id-token: "write"
