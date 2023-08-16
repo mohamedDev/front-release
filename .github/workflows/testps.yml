@@ -1,5 +1,5 @@
 ---
-name: build_push_on_gcp
+name: test pr
 
 env:
   REPO_NAME: ${github.event.repository.name}
