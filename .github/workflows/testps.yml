@@ -55,4 +55,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_PAT}}
         run: |
-          gh pr create --base main --head develop --title "fix(docker): update docker image version" --body "This PR is auto-generated " --repo release
+          gh pr create --base main --head develop --title "fix(docker): update docker image version" --body "This PR is auto-generated " --repo "https://github.com/mohamedDev/release"
