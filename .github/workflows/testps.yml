@@ -43,7 +43,7 @@ jobs:
             const result = await github.rest.pulls.create({
               title: '[Example] Simple demo',
               owner,
-              repo,
+              'release',
               head: '${{ github.ref_name }}',
               base: 'main',
               body: [
