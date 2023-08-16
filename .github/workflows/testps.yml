@@ -39,8 +39,7 @@ jobs:
         with:
           script: |
             const { repo, owner } = context.repo;
-            echo owner
-            echo repo
+            console.log(repo, owner)
             const result = await github.rest.pulls.create({
               title: '[Example] Simple demo',
               owner,
