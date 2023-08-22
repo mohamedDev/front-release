@@ -38,3 +38,8 @@ jobs:
               {"type":"test","section":"🧪 Tests","hidden":false},
               {"type":"docs","section":"📚 Documentation","hidden":false}
             ]
+
+      - name: Deploy Prod
+        if: ${{ steps.release.outputs.releases_created }}
+        run: echo "tag--------------------------------${{ steps.release.outputs.tag_name }}"
+
