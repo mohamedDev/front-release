@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/mohamedDev/front-release/compare/v1.3.0...v1.4.0) (2023-08-22)
+
+
+### 🚀 Features
+
+* **package:** Update package.json ([48d1d40](https://github.com/mohamedDev/front-release/commit/48d1d400dd4527fa4975d39a3d557a3e151d2764))
+* **package:** Update package.json ng script ([dca9508](https://github.com/mohamedDev/front-release/commit/dca9508e6a75628e2476257f74f47e8456a39ae2))
+
 ## [1.3.0](https://github.com/mohamedDev/front-release/compare/v1.2.0...v1.3.0) (2023-08-22)
 
 
