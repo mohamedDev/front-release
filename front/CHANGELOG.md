@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/mohamedDev/front-release/compare/v1.4.0...v2.0.0) (2023-08-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* update release
+
+### 🐞 Bug Fixes
+
+* **mainjs:** Update bump.js ([eb1e6db](https://github.com/mohamedDev/front-release/commit/eb1e6db0d6e39fcab71aee1c6c254c772b08e5e6))
+* update release ([6a1a693](https://github.com/mohamedDev/front-release/commit/6a1a6932d579264daebcf7a8e286a1befc13254e))
+
 ## [1.4.0](https://github.com/mohamedDev/front-release/compare/v1.3.0...v1.4.0) (2023-08-22)
 
 
