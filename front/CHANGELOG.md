@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/mohamedDev/front-release/compare/v1.2.0...v1.3.0) (2023-08-22)
+
+
+### 🚀 Features
+
+* **maintts:** Update main.ts ([999af58](https://github.com/mohamedDev/front-release/commit/999af585d1954b8ae86b8dd5164a16cea69d8ba8))
+* **test:** Update index.html ([eee798e](https://github.com/mohamedDev/front-release/commit/eee798e120d4bcf738cb49e6e695ac83ee23bc23))
+
 ## [1.2.0](https://github.com/mohamedDev/front-release/compare/v1.1.1...v1.2.0) (2023-08-22)
 
 
