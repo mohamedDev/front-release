@@ -39,7 +39,9 @@ jobs:
               {"type":"docs","section":"📚 Documentation","hidden":false}
             ]
 
-      - name: Deploy Prod
+      - run: echo "A release was created."
         if: ${{ steps.release.outputs.releases_created }}
-        run: echo "tag--------------------------------${{ steps.release.outputs.tag_name }}"
+      # For root level packages: ${{ steps.release.outputs.package-a--tag_name }}
+      - run: echo "Release ${{ steps.release.outputs['packages/package-a--tag_name'] }} created for package-a."
+        if: ${{ steps.release.outputs['packages/package-a--release_created'] }}
 

@@ -1,7 +1,6 @@
 "use strict";
 
 const fileSystem = require("fs");
-
 let jsonData = require("./package.json");
 const oldBbuildVersion = jsonData.version;
 const buildVersionSplited = oldBbuildVersion.split("+");
