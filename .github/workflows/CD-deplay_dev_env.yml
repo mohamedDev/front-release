@@ -39,6 +39,14 @@ jobs:
         working-directory: ${{env.WORKING_DIR}}
         run: npm install
 
+      - name: Set the build version value
+        working-directory: ${{env.WORKING_DIR}}
+        run: |
+          echo "TAG=$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
+
+      - name: Display old Tag Value
+        run: |
+          echo "${{ env.TAG }}"
       - name: Bump build version value
         working-directory: ${{env.WORKING_DIR}}
         run: |
@@ -65,8 +73,6 @@ jobs:
 
     outputs:
       newversion: "${{ env.TAG }}"
-
-      ############
 
   checkout-release:
     needs: build-container
@@ -101,3 +107,8 @@ jobs:
           else 
             echo "no changes"
           fi
+      - name: Git commit and push
+        run: |
+          git commit --no-verify -am "[skip ci] auto bump metadata version"
+          git push -u origin develop
+
