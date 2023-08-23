@@ -39,9 +39,6 @@ jobs:
               {"type":"docs","section":"📚 Documentation","hidden":false}
             ]
 
-      - run: echo "A release was created."
+      - run: echo "A release was created. v${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}"
         if: ${{ steps.release.outputs.releases_created }}
-      # For root level packages: ${{ steps.release.outputs.package-a--tag_name }}
-      - run: echo "Release ${{ steps.release.outputs['packages/package-a--tag_name'] }} created for package-a."
-        if: ${{ steps.release.outputs['packages/package-a--release_created'] }}
 
