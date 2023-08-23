@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://github.com/mohamedDev/front-release/compare/v2.0.1...v2.1.0) (2023-08-23)
+
+
+### 🐞 Bug Fixes
+
+* **bump:** Update bump.js ([709ad25](https://github.com/mohamedDev/front-release/commit/709ad25e31ad20fcd0e04f0c865d003b20a19297))
+
+
+### 🚀 Features
+
+* **workflow:** update workflow ([976a62d](https://github.com/mohamedDev/front-release/commit/976a62d1d2b8951e83527f1a4f589f58ffdb16b4))
+
 ### [2.0.1](https://github.com/mohamedDev/front-release/compare/v2.0.0...v2.0.1) (2023-08-22)
 
 
