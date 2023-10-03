@@ -1,0 +1,33 @@
+---
+name: CD-release_prod
+
+env:
+  REPO_NAME: ${{ github.event.repository.name }}
+  APPNAME: coms-ui-prod #THIS CANNOT CONTAIN ANY MAJ
+  PR: ${{ github.event.pull_request.number }}
+  TAG: latest
+  PATH_DOCKERFILE: ./front
+  APP_ENV: prod
+  WORKING_DIR: ./front
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "The version to release. The version should be the same as version in package.json. For example, 1.0.0"
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Project
+        uses: actions/checkout@v3
+        with:
+          ref: ref/tags/v${{ inputs.version }}
+
+      - name: test
+        run: |
+          echo v${{ inputs.version }}
+          git status
