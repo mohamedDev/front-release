@@ -12,10 +12,6 @@ env:
 
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: "The version to release. The version should be the same as version in package.json. For example, 1.0.0"
-        required: true
 
 jobs:
   release:
@@ -29,8 +25,6 @@ jobs:
 
       - name: test
         run: |
-          echo v${{ inputs.version }}
-          git checkout -b newbranch v${{ inputs.version }}
           git status
           ls -al
           cat front/package.json
