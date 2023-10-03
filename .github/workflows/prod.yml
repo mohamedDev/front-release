@@ -29,5 +29,8 @@ jobs:
       - name: test
         run: |
           echo v${{ inputs.version }}
-          git checkout -b newbranch tags/v${{ inputs.version }}
+          git checkout -b newbranch v${{ inputs.version }}
           git status
+          ls -al
+          cat front/package.json
+          cat front/CHANGELOG.md
