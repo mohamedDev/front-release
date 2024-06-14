@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/mohamedDev/front-release/compare/v3.0.0...v3.1.0) (2024-06-14)
+
+
+### 🚀 Features
+
+* **env:** update environment.ts ([b4462d0](https://github.com/mohamedDev/front-release/commit/b4462d037894fd8f4497afcc22bc6a9bc581a480))
+
 ## [3.0.0](https://github.com/mohamedDev/front-release/compare/v2.1.0...v3.0.0) (2024-06-14)
 
 
