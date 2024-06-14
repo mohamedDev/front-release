@@ -1,6 +1,6 @@
 {
-  "name": "front release",
-  "version": "2.2.0",
+  "name": "front",
+  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host",
