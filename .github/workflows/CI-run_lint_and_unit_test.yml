@@ -33,6 +33,12 @@ jobs:
         working-directory: ${{env.working-dir}}
         run: npm install
 
-      - name: run angular test
-        working-directory: ${{env.working-dir}}
-        run: npm run test
+      - name: Run tests with coverage
+        run: npm run test -- --code-coverage --watch=false
+
+      - name: Deploy coverage report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./coverage
+          publish_branch: gh-pages
